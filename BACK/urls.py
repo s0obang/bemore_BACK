@@ -16,10 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+import pageapp
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     #joinFormapp의 urls를 추가했다
     path('', include('joinFormapp.urls')),
+    #pageapp 의 urls 추가
+    path('', include('pageapp.urls'))
 ]
+
