@@ -1,9 +1,9 @@
 from django.db import models
 
 # Create your models here.
-<<<<<<< HEAD
+
 #진선이 모델
-=======
+
 
 class Applicant(models.Model):
     name = models.CharField(max_length=100)
@@ -16,4 +16,4 @@ class Applicant(models.Model):
     # 게시글의 제목을 name으로 설정
     def __str__(self):
         return self.name
->>>>>>> b85685f45bde43c50a2a3c35bf5c4b52030449d5
+
