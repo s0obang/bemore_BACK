@@ -1,22 +1,28 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 
 # Create your views here.
 from django.contrib import auth
 from .models import userList
 from .models import passList
 from django.http import HttpResponse
+from django.utils import timezone
 # Create your views here.
 
 
 def index(request):
     return render(request, 'main/index.html')
 
+
+
 def login(request):
+    current_date = timezone.now().date()
     if request.method ==  'POST': #로그인 요청시 로그인
         username = request.POST.get('username',None)
         usernum = request.POST.get('usernum',None)
         error = {}
 
+        
+       
         try:
             user = userList.objects.get(username=username, usernum=usernum)
             passuser = passList.objects.get(usernum = usernum,username=username)
@@ -32,6 +38,9 @@ def login(request):
         return render(request,'main/result.html')
     
     else:
-        return render(request,'main/login.html') #get 요청시 login html 띄움
+         if current_date.month != 2 or current_date.day != 28:
+            return render(request,'main/arready.html')  
+         else:
+            return render(request,'main/login.html') #get 요청시 login html 띄움
 
 
