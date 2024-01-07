@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class JoinformappConfig(AppConfig):
+class PageappConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "joinFormapp"
+    name = "pageapp"
