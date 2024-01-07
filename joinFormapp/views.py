@@ -8,6 +8,7 @@ def show_joinForm(request):
         if form.is_valid():
             form.save()  # 입력 데이터 저장
             return redirect('success_page')  # 입력 성공 후 리디렉션
+      
     else:
         form = ApplicantForm()
     

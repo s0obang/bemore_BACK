@@ -6,12 +6,12 @@ from .models import userList
 from .models import passList
 from django.http import HttpResponse
 from django.utils import timezone
+from django import forms
 # Create your views here.
 
 
 def index(request):
     return render(request, 'main/index.html')
-
 
 
 def login(request):
@@ -38,7 +38,7 @@ def login(request):
         return render(request,'main/result.html')
     
     else:
-         if current_date.month != 2 or current_date.day != 28:
+         if current_date.month != 1 or current_date.day != 7:
             return render(request,'main/arready.html')  
          else:
             return render(request,'main/login.html') #get 요청시 login html 띄움
