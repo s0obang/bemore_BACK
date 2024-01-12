@@ -1,0 +1,81 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top, hsl(191, 78%, 66%), #02151f 33%);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: grid;
+    height: 100%;
+    place-items: center;
+}
+
+.background {
+    height: 170vh;
+    position: fixed;
+    top: -150px;
+    right: -150px;
+    width: auto;
+    z-index: -1;
+}
+#line {
+    margin-bottom: 30px;
+    margin-top:30px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid white; 
+    border-image: linear-gradient(to right, rgb(173, 232, 255), transparent);
+    border-image-slice: 1;
+    width: 700px;
+}
+
+/*인풋 밑줄*/
+label,
+input,
+textarea {
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+}
+
+input[type="text"],
+input[type="tel"],
+textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    border-image: linear-gradient(to right, skyblue, transparent);
+    border-image-slice: 1;
+    width: 780px;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    outline: none;
+    border-bottom: 2px solid deepskyblue;
+}
+/*버튼*/
+#bt_sub {
+    background: linear-gradient(to left, rgb(0, 4, 5), transparent);
+    color: white;
+    padding: 10px 20px;
+    border:none;
+    
+    border-radius: 10px;
+}
+/*글꼴은 어케할까..?*/
+
+@media screen and (max-width:900px){
+/* 백그라운드 이미지 */
+  .background {
+      height: 100vh; /* 화면 높이의 100%로 설정 */
+      width: 120%; /* 화면 너비의 100%로 설정 */
+      object-fit: cover; /* 이미지 비율을 유지하면서 적절하게 잘라내기 */
+      object-position: center top; /* 이미지를 가운데 상단에 위치시키기 */
+      top: 13vh;
+      left: -100px;
+      z-index: -1;
+    }
+}
