@@ -1,4 +1,5 @@
 // 미쿼 네비바
+
 $(".mNav").click(function(){
     $(".nav_menu").animate({width:"toggle"}, 400);
 });

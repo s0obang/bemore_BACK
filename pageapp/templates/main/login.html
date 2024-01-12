@@ -7,14 +7,15 @@
     <title>Sorry..</title>
     <link rel="stylesheet" href="{% static 'css/common.css' %}">
     <link rel="stylesheet" href="{% static 'css/navbar.css'%}">
+    <link rel="stylesheet" href="{% static 'css/media_inquiry.css'%}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="{% static 'js/mNav.js' %}"></script>
+    <script defer src="{% static 'js/mNav.js' %}"></script>
 </head>
 <body>
     <img src="{% static 'img/back.png' %}" class="background">
     <!-- 네비바 -->
     <div id="navbar">
-        <div class="nav_logo"><i><a href="start.html">BEMORE+</a></i></div>
+        <div class="nav_logo"><i><a href="{% url 'pageapp:index'%}">BEMORE+</a></i></div>
         <div class="mNav">
             <div class="icon_wrap">
                 <div class="icon"></div>
@@ -26,11 +27,19 @@
             <li><div><a href="{% url 'pageapp:intro' %}">동아리 소개</a></div></li>
             <li><div><a href="{% url 'pageapp:act' %}">동아리 활동</a></div></li>
         </ul>
-    <form action="{% url 'pageapp:login' %}" method="POST">
-    {% csrf_token %}
-    username: <input type='text' name='username'><br/>
-    usernum: <input type='password' name='usernum'><br/>
-    <input type="submit" value="로그인">
-   </form>
+    </div>
+    <!-- 합격자 조회 -->
+    <div class="container">
+        <form action="{% url 'pageapp:login' %}" method="POST">
+            {% csrf_token %}
+            <div class="formbox">
+                <label for="name">이름</label><input type='text' id="name" name='username' required><br/>
+                <label for="phone">전화번호</label><input type='text' id="phone" name='usernum' required><br/>
+            </div>
+            <div class="bt_box">
+                <button type="submit" id="bt_sub">조회</button>
+            </div>
+       </form>
+    </div>
 </body>
 </html>

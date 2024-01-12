@@ -11,9 +11,9 @@
     <script src="{% static 'js/start.js' %}"></script>
 </head>
 <body>
-    <img src="{% static 'img/back.png' %}" class="background">
+    <div clas="bg"> <img src="{% static 'img/back.png' %}" class="background"></div>
     <nav class="navbar">
-        <div class="nav_logo"><i><a href="start.html">BEMORE+</a></i></div>
+        <div class="nav_logo"><i><a href="{% url 'pageapp:index'%}">BEMORE+</a></i></div>
     </nav>
 
     <section id="intro">

@@ -1,0 +1,46 @@
+.container{
+    overflow: hidden;
+    width: 80%; /* 전체 화면의 80%를 차지하도록 설정 */
+    justify-content: center;
+    padding-top: 30px;
+}
+.formbox{
+    float:left;
+    width: 70%; 
+    line-height: 30px;
+    margin-top: 50px;
+}
+.bt_box{
+    width: 20%;
+    float: right;    
+}
+#bt_sub{
+    margin-top:250px;
+    margin-left: 60px;
+}
+@media screen and (max-width:900px){
+        /*모바일용 css*/
+        .container{
+        width: 80%; /* 전체 화면의 80%를 차지하도록 설정 */
+        justify-content: center;
+        padding-top: 30px;
+        
+    }
+    .formbox{
+        display: inline-block;
+        width: 100%; 
+        line-height: 30px;
+        margin-top: 30px;
+    }
+    .bt_box{
+        display: inline-block;
+        width: 100%;
+        justify-content: center;   
+    }
+    #bt_sub{
+    margin-top:30px;
+    margin-bottom: 50px;
+    margin-left: 115px;
+    }
+        
+    }

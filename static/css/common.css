@@ -19,16 +19,6 @@ body{
     width: auto;
     z-index: -1;
 }
-#line {
-    margin-bottom: 30px;
-    margin-top:30px;
-    background-color: transparent;
-    border: none;
-    border-bottom: 3px solid white; 
-    border-image: linear-gradient(to right, rgb(173, 232, 255), transparent);
-    border-image-slice: 1;
-    width: 700px;
-}
 
 /*인풋 밑줄*/
 label,
@@ -68,6 +58,7 @@ textarea:focus {
 /*글꼴은 어케할까..?*/
 
 @media screen and (max-width:900px){
+    
 /* 백그라운드 이미지 */
   .background {
       height: 100vh; /* 화면 높이의 100%로 설정 */
@@ -77,5 +68,15 @@ textarea:focus {
       top: 13vh;
       left: -100px;
       z-index: -1;
+    }
+    .bg{
+        position: fixed;
+        top: 0;       
+        left: 0;    
+        width: 100%;  
+        height: 100%; 
+        background-size: cover;  
+        background-position: center; 
+        transform: translateZ(0); 
     }
 }
