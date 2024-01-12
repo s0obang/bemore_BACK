@@ -1,0 +1,28 @@
+.container{
+    overflow: hidden;
+    width: 80%; /* 전체 화면의 80%를 차지하도록 설정 */
+    justify-content: center;
+    padding-top: 50px;
+    }
+.formbox{
+    float:left;
+    width: 70%;
+    line-height: 30px;
+    margin-top: 150px;
+    }
+label{
+    margin-top:30px;
+    }
+.bt_box{
+    width: 20%;
+    }
+#bt_sub{
+    margin-bottom:250px;
+    }       
+
+    @media screen and (max-width:900px){
+        /*모바일용 css*/
+        #bt_sub{
+            font-size: 10px;
+        }
+    }
