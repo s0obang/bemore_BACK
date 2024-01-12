@@ -6,7 +6,7 @@ class Applicant(models.Model):
     phone_number = models.CharField(max_length=20)
     introduction = models.TextField()
     motivation = models.TextField()
-    activity_attachment = models.FileField(upload_to='activity_attachments/')
+    activity_attachment = models.FileField(upload_to='activity_attachments/', blank=True)
     github_or_tistory = models.URLField(blank=True)
 
     # 게시글의 제목을 name으로 설정
