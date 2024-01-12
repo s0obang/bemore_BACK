@@ -26,11 +26,15 @@
             <li><div><a href="{% url 'pageapp:intro' %}">동아리 소개</a></div></li>
             <li><div><a href="{% url 'pageapp:act' %}">동아리 활동</a></div></li>
         </ul>
-    <form action="{% url 'pageapp:login' %}" method="POST">
-    {% csrf_token %}
-    username: <input type='text' name='username'><br/>
-    usernum: <input type='password' name='usernum'><br/>
-    <input type="submit" value="로그인">
-   </form>
+    </div>
+    <!--합격 화면-->
+    <section class="result">
+        <div id="line"></div>
+        <h1>축하드립니다!</h1>
+        <h3>BEMORE 0기에</h3>
+        <h2 style="display: inline;">합격</h2><h3 style="display: inline;">하셨습니다!</h3>
+        <div id="line"></div>
+    </section>
+
 </body>
 </html>
