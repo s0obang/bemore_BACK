@@ -38,9 +38,9 @@ def login(request):
             return render(request, 'main/login.html', error)
         
         except passList.DoesNotExist:
-            return render(request,'main/fail.html') # 불합격
+            return render(request,'result/fail.html') # 불합격
         
-        return render(request,'main/pass.html') # 합격
+        return render(request,'result/pass.html') # 합격
     
     else:
          if current_date.month != 1 or current_date.day != 12:
