@@ -79,6 +79,7 @@ body {
         display: flex;
         flex-direction: row;
         white-space: nowrap;
+        margin-top: 60px;
     }
     .col1{
         width: 80%;
