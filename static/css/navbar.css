@@ -94,6 +94,7 @@ a {text-decoration: none; color: inherit;}
   margin-top: 0;
 }
 
+
 @media screen and (max-width:900px){
   #navbar{width:100%;}
   #navbar::after{display: none;}
