@@ -1,33 +1,10 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorry..</title>
-    <link rel="stylesheet" href="{% static 'css/common.css' %}">
-    <link rel="stylesheet" href="{% static 'css/navbar.css'%}">
+{% block content %}
+    <!--css-->
     <link rel="stylesheet" href="{% static 'css/result.css'%}">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script defer src="{% static 'js/mNav.js' %}"></script>
-</head>
-<body>
-    <img src="{% static 'img/back.png' %}" class="background">
-    <!-- 네비바 -->
-    <div id="navbar">
-        <div class="nav_logo"><i><a href="{% url 'pageapp:index'%}">BEMORE+</a></i></div>
-        <div class="mNav">
-            <div class="icon_wrap">
-                <div class="icon"></div>
-            </div>
-        </div>
-        <ul class="nav_menu">
-            <li><div><a href="{% url 'joinFormapp:show_joinForm'%}">지원하기</a></div></li>
-            <li><div><a href="{% url 'pageapp:login' %}">합격자 조회</a></div></li>
-            <li><div><a href="{% url 'pageapp:intro' %}">동아리 소개</a></div></li>
-            <li><div><a href="{% url 'pageapp:act' %}">동아리 활동</a></div></li>
-        </ul>
-    </div>
+    <!--js-->
+
     <!--불합격 화면-->
     <section class="result">
         <div id="line"></div>
@@ -36,6 +13,5 @@
         <h2 style="display: inline;">불합격</h2><h3 style="display: inline;">하셨습니다</h3>
         <div id="line"></div>
     </section>
-
-</body>
-</html>
+    
+{% endblock %}

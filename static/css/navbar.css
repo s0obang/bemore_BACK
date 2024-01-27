@@ -7,7 +7,7 @@
 li {list-style: none;}
 a {text-decoration: none; color: inherit;}
 #navbar {
-  position: fixed;
+  position: relative;
   width: 100%;
   height: 60px;
   top:0;
@@ -24,7 +24,8 @@ a {text-decoration: none; color: inherit;}
   right: 0;
   left: 0;
 }
-#navbar i {
+.nav_logo{float: left;}
+.nav_logo h5 {
   float: left;
   font-size: 30px;
   font-weight: 500;
@@ -77,35 +78,36 @@ a {text-decoration: none; color: inherit;}
 
 
 @media screen and (max-width:900px){
+  .nav_logo h5{font-size: 25px; display: flex; justify-content: center;}
   #navbar{width:100%;}
   #navbar::after{display: none;}
   #navbar i{ margin: 10px 0; text-align: center; width: 100%; }
   #navbar .nav_menu{
     display: none; 
-      position: absolute;
-      top:60px;
-      right:0;
-      width: 40%; 
-      height: 100vh;
-      padding:0;
-      margin:0;
-      background-color: #02151ff8;
-      z-index: 1;
+    position: absolute;
+    top:60px;
+    right:0;
+    width: 40%; 
+    height: 100vh;
+    padding:0;
+    margin:0;
+    background-color: #02151ff8;
+    z-index: 1;
   }
   
   .mNav{display: block;}
   #navbar .nav_menu li{ 
-      padding: 20px 40px;
-      text-align: center;
-      display: block;
-      font-size: 3px;
-      border-bottom: 1px solid #dbdbdb48;
+    padding: 20px 40px;
+    text-align: center;
+    display: block;
+    font-size: 3px;
+    border-bottom: 1px solid #dbdbdb48;
   }
   #navbar .nav_menu li div{
     width: 100px;
-}
-#navbar .nav_menu li div a{
-  font-size: 15px;
-}
+ }
+ #navbar .nav_menu li div a{
+   font-size: 15px;
+ }
             
 }
