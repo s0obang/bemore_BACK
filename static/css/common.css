@@ -10,7 +10,9 @@ body{
     height: 100%;
     place-items: center;
 }
-
+body::-webkit-scrollbar {
+    width: 0px;
+  }
 .background {
     height: 170vh;
     position: fixed;
@@ -57,9 +59,19 @@ textarea:focus {
 }
 /*글꼴은 어케할까..?*/
 
+#email p {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    bottom: 10px;
+}
+
 @media screen and (max-width:900px){
     
 /* 백그라운드 이미지 */
+.bg{
+    position: fixed;
+}
   .background {
       height: 100vh; /* 화면 높이의 100%로 설정 */
       width: 120%; /* 화면 너비의 100%로 설정 */
@@ -67,7 +79,16 @@ textarea:focus {
       object-position: center top; /* 이미지를 가운데 상단에 위치시키기 */
       top: 13vh;
       left: -100px;
+      position:fixed;
       z-index: -1;
+    }
+   /* .background {
+        height: 170vh;
+        position: fixed;
+        top: -150px;
+        right: -150px;
+        width: auto;
+        z-index: -1;
     }
     .bg{
         position: fixed;
@@ -78,5 +99,6 @@ textarea:focus {
         background-size: cover;  
         background-position: center; 
         transform: translateZ(0); 
-    }
+        background-attachment: fixed;
+    }*/
 }

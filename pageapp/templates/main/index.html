@@ -1,43 +1,32 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
-    <link rel="stylesheet" href="{% static 'css/common.css' %}">
+{% block content %}
+    <!--css-->
     <link rel="stylesheet" href="{% static 'css/start_animation.css' %}">
+    <!--js-->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="{% static 'js/start.js' %}"></script>
-</head>
-<body>
-    <div clas="bg"> <img src="{% static 'img/back.png' %}" class="background"></div>
-    <nav class="navbar">
-        <div class="nav_logo"><i><a href="{% url 'pageapp:index'%}">BEMORE+</a></i></div>
-    </nav>
-
-    <section id="intro">
+    <!--시작화면-->
+    <section id="section1">
         <div class="eng">
             <h1>BeMore+</h1>
             <p>&nbsp;우리는 함께 더해가는 가치를 만드는 사람들, 비모어입니다.</p>
         </div>
         <div class="ko">
             <h3>우리는</h3>
-            <h2>함께 더해가는 가치를 만드는 사람들</h2>
+            <h2>함께 더해가는 가치를 만드는 사람들,</h2>
             <h1 style="display: inline;">비모어</h1><h3 style="display: inline;">입니다.</h3>
         </div>
     </section>
-    <section>
+    <section id="section2">
         <nav class="start_link">
             <ul>
                 <li><a href="{% url 'joinFormapp:show_joinForm'%}">지원하기</a></li>
-                <li><a href="{% url 'pageapp:login' %}">합격자 조회</a></li>
+                <li><a id="apply_" href="{% url 'pageapp:login' %}">합격자 조회</a></li>
                 <li><a href="{% url 'pageapp:intro' %}">동아리 소개</a></li>
                 <li><a href="{% url 'pageapp:act' %}">동아리 활동</a></li>
-                <li id="email">ssubemore@gmail.com</li>
             </ul>
          </nav>
     </section>
 
-</body>
-</html>
+{% endblock %}

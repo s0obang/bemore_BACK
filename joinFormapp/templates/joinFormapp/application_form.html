@@ -1,3 +1,4 @@
+{% extends 'base.html' %}
 <!-- application_form.html 
 {% load static %}
 <form method="post" enctype="multipart/form-data">
@@ -6,36 +7,14 @@
     <button type="submit">제출</button>
 </form>
 -->
+
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JoinUs</title>
-    <link rel="stylesheet" href="{% static 'css/common.css' %}">
-    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+{% block content %}
+    <!--css-->
     <link rel="stylesheet" href="{% static 'css/media_join.css' %}">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="{% static 'js/mNav.js' %}"></script>
-    
-</head>
-<body>
-    <img src="{% static 'img/back.png' %}" class="background">
-    <!-- 네비바 -->
-    <div id="navbar">
-        <div class="nav_logo"><i><a href="start.html">BEMORE+</a></i></div>
-        <div class="mNav">
-            <div class="icon_wrap">
-                <div class="icon"></div>
-            </div>
-        </div>
-        <ul class="nav_menu">
-            <li><div><a href="{% url 'joinFormapp:show_joinForm'%}">지원하기</a></div></li>
-            <li><div><a href="{% url 'pageapp:login' %}">합격자 조회</a></div></li>
-            <li><div><a href="{% url 'pageapp:intro' %}">동아리 소개</a></div></li>
-            <li><div><a href="{% url 'pageapp:act' %}">동아리 활동</a></div></li>
-        </ul>
-    </div>
+    <!--js-->
+
+    <!--지원서 작성-->
     {% if messages %}
         <ul class="messages">
         {% for message in messages %}
@@ -70,5 +49,5 @@
         </div>
         </form>
     </div> 
-</body>
-</html>
+
+{% endblock %}

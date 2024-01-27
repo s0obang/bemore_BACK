@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-
+from django.http import JsonResponse
 # Create your views here.
 from django.contrib import auth
 from .models import userList
@@ -43,9 +43,10 @@ def login(request):
         return render(request,'result/pass.html') # 합격
     
     else:
-         if current_date.month != 1 or current_date.day != 12:
-            return render(request,'main/arready.html')  # 조회 기간 아님
-         else:
-            return render(request,'main/login.html') #get 요청시 login html 띄움
+        not_date = current_date.month != 1 or current_date.day != 6
+        if not_date:
+            return render(request, 'main/already.html',{'not_date':not_date})
+        else:
+            return render(request, 'main/login.html') #get 요청시 login html(합격자 조회) 띄움
 
 
